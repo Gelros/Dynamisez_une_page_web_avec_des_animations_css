@@ -1,0 +1,539 @@
+body{
+    background: rgb(238, 238, 238);
+    margin: 0;
+    padding: 0;
+}
+
+a{
+    text-decoration: none;
+    color: black;
+}
+
+.loader{
+    position: fixed;
+    flex-direction: column;
+    display: flex;
+    height: 100%;
+    width: 100%;
+    background-color: rgba(0, 0, 0, 0.947);
+    align-items: center;
+    justify-content: center;
+    z-index: 99;
+    animation: load-wrapper 3s both;
+    -webkit-animation: load-wrapper 5s both;
+    animation-duration: 3s;
+}
+
+.spin{
+    display: block;
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    border: 5px solid transparent;
+    border-top-color:rgb(89, 31, 39) ;
+    animation: rotation 2.4s linear infinite;
+    margin-bottom: 50px;
+    position: relative;
+}
+
+.spin::before, .spin::after{
+    content: "";
+    border-radius: 50%;
+    border:5px solid transparent ;
+    position: absolute;
+}
+
+.spin::before{
+    top: 10px;
+    left:10px;
+    right: 10px;
+    bottom: 10px;
+    border-top-color:rgb(89, 31, 39) ;
+    animation: rotation 2.5s linear infinite;
+}
+
+.spin::after{
+    top: 25px;
+    left:25px;
+    right: 25px;
+    bottom: 25px;
+    border-top-color:rgb(89, 31, 39) ;
+    animation: rotation 2s linear infinite;
+}
+
+@keyframes rotation {
+    0%{
+        transform: rotate(0deg);
+        border-top-color:rgb(89, 31, 79) ;
+        transition: ease;
+    }
+
+    50%{
+        border-top-color: rgb(132, 49, 75);
+        transition: ease;
+    }
+
+    100%{
+        transform: rotate(360deg);
+        border-top-color:rgb(89, 31, 79) ;
+        transition: ease;
+    }
+    
+}
+
+
+.hidden{
+    -webkit-animation: hidden ;
+    animation: hidden ;
+}
+
+.loading-opacity{
+    animation-name: loading-opacity;
+
+}
+
+@keyframes loading-opacity {
+    0%{
+opacity: 0.9;
+    }
+
+
+    100%{
+     z-index: -99;
+     opacity: 0;
+    }
+}
+
+.logo{
+    display: flex;
+    align-items: center;
+    padding: 15px 0;
+}
+
+.logo i{
+    display: none;
+}
+
+.logo img{
+width: 50%;
+margin: auto;
+}
+
+/****************/
+
+.localisation{
+background-color: rgb(206, 206, 206);
+box-shadow: 0px -1px 2px 0px rgb(167, 167, 167);
+
+}
+
+.localisation_child{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.localisation_child i{
+    padding-right: 10px;
+    font-size: 0.9rem;
+}
+
+/****************/
+
+.reservation{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+    background-color: rgb(224, 224, 224);
+    align-items: center;
+    padding: 15px 15px;
+}
+
+.reservation_titre{
+    margin-top: 15px;
+}
+
+.reservation_titre h2{
+    margin: 0;
+}
+
+.reservation_texte{
+    padding: 0 13%;
+}
+
+.reservation_btn{
+   margin-top: 10px;
+   margin-bottom: 25px;
+}
+
+.reservation_btn-1{
+    height: 40px;
+    border-radius: 25px;
+    border: none;
+    background-image: linear-gradient(to top, #9356c5, #b05ecc, #cb66d1, #e66fd6, #ff79da);
+    cursor: pointer;
+    transition: 0.5s;
+    box-shadow: 1px 2px 3px 0px #979797;
+}
+
+.reservation_btn-1:hover{
+    transform: scale(1.1);
+    opacity: 0.9;
+    box-shadow: 1px 2px 3px 0px #3e3e3e;
+
+}
+
+.reservation_btn-1::before{
+    content: "Explorer nos restaurants";
+    width: 150px;
+    padding: 5px;
+    color: rgb(236, 236, 236);
+}
+
+/*******************/
+
+.nav{
+    margin: 0 15px;
+}
+
+.nav h2{
+    padding-bottom: 20px;
+    padding-top: 10px;
+}
+
+.nav_fonction-nav{
+    display: flex;
+    font-size: 1.2rem;
+    background: rgb(233, 233, 233);
+    height: 80px;
+    align-items: center;
+    padding-left: 0;
+    border-radius: 25px;
+    box-shadow: 1px 2px 4px 0px rgb(217, 217, 217);
+    transition:0.5s ;
+}
+
+.nav_fonction-nav:hover{
+transform: scale(1.02);
+background-color: #9256dc3f ;
+}
+
+.nav_icone{
+    cursor: pointer;
+}
+
+.nav_icone:hover{
+    color: #9356dc;
+}
+
+.nav_fonction-nav:not(:last-child){
+    margin-bottom: 40px;
+}
+
+.nav_fonction-nav i:nth-child(1){
+    background-color: #9356DC ;
+    display: flex;
+    justify-content:center ;
+    align-items: center;
+    border-radius: 50%;
+    height: 20px;
+    width: 20px;
+    padding: 3px;
+    transform: translateX(-10px);
+    color: white;
+    font-size: 0.8rem;
+}
+
+.nav_fonction-nav i{
+    margin-right: 15px;
+}
+
+.nav_fonction-nav a{
+    text-decoration: none;
+    margin-left: 10px;
+    color: black;
+    font-weight: 500;
+}
+
+/**************MAIN**************/
+
+main{
+    background-color: rgba(224, 215, 226, 0.632);
+    margin-top: 70px;
+    padding-bottom: 40px;
+}
+
+.main_titre{
+    padding-top: 30px;
+    margin-left: 20px;
+}
+
+.restau p{
+    margin: 0;
+}
+
+.heart{
+    display: flex;
+    justify-content:space-between;
+}
+
+.heart i{
+    font-size: 1.1rem;
+}
+
+
+.btn_heart{
+    position: relative;
+    margin-bottom: 25px;
+    width: 50px;
+}
+
+.btn_heart_on{
+    position: absolute;
+    font-size: 30px;
+    right: 3%;
+    transition: 0.5s;
+    opacity: 0;
+    z-index: 9;
+    transition: 0.6s ease;
+}
+
+.btn_heart_on:hover{
+    opacity: 1;
+}
+
+
+.fas{
+    color: transparent;
+    background-clip: text;
+    -webkit-background-clip: text;
+    background-image: linear-gradient(to bottom, #f06292, #df4d96, #ca3a9c, #af2ba3, #8e24aa);
+}
+
+
+.btn_heart_off{
+    position: absolute;
+    font-size: 30px;
+    right: 3%;
+    z-index: 2;
+}
+
+.restau{
+    width: 90%;
+    margin: auto;
+    border-radius: 25px;
+    background-color: rgb(234, 234, 234);
+    box-shadow: 1px 3px 5px 2px #b7b7b7;
+    margin-bottom: 20px;
+    position: relative;
+    animation: chargement 1.5s ;
+    transition: 0.5s;
+}
+
+.restau:hover{
+    transform: scale(1.05);
+}
+
+.restau_1{
+    animation-delay: 0.2s;
+}
+
+.restau_2{
+    animation-delay: 0.5s;
+}
+
+.restau_3{
+    animation-delay: 0.7s;
+}
+
+.restau_4{
+    animation-delay: 0.9s;
+}
+
+@keyframes chargement {
+    0% {
+        opacity: 0;
+        transform: translatey(10%);
+    }
+
+    100% {
+
+        opacity: 1;
+        transform: translatey(0%);
+
+    }
+
+    
+}
+
+.nouveau{
+    position: absolute;
+    top: 7%;
+    right: 5%;
+    width: 23%;
+    padding: 5px;
+    text-align: center;
+    color: rgb(38, 174, 151);
+    background-color: rgb(98, 234, 193);
+    border-radius: 2px;
+}
+
+.restau img{
+    width: 100%;
+    object-fit: cover;
+    height: 160px;
+    border-radius: 25px 25px 0 0;
+}
+
+.restau_box{
+    padding: 10px;
+    display: block;
+}
+
+.restau_box p:nth-child(2){
+    font-size: 0.8rem;
+    margin-top: 5px;
+    margin-bottom: 5px;
+}
+
+/*********FOOTER********/
+
+footer{
+    background-color: rgb(70, 70, 70);
+    display: flex;
+    flex-direction: column;
+}
+
+.footer{
+    margin-top: 15px;
+    margin-left: 20px;
+}
+
+.logoF img{
+width: 25%;
+margin-bottom: 15px;
+}
+
+.footer_lien{
+    margin-bottom: 8px;
+}
+
+.footer_lien a{
+    text-decoration: none;
+    color: rgb(211, 211, 211);
+}
+
+.footer_lien i{
+    color: rgb(211, 211, 211);
+    margin-right: 8px;
+}
+
+/***********RESPONSIVE*********/
+
+@media screen and (min-width:760px){
+
+    .nav{
+        font-size: 1.4rem;
+    }
+
+    .nav_icone{
+        font-size: 1.4rem;
+    }
+
+    /**********MAIN**********/
+
+    .compart_tab{
+        display: flex;
+        justify-content: center;
+    }
+
+    .compart_tab a{
+        width: 100%;
+    }
+
+    .restau{
+        height: 250px;
+    }
+
+    .restau_box{
+        margin: 10px 10px;
+    }
+
+    .restau_box p{
+        font-size: 1.2rem;
+    }
+    
+}
+
+@media  screen and (min-width:1300px) {
+    header{
+        display: flex;
+    }
+
+    .head{
+        height: 444px;
+        width: 67%;
+    }
+
+    .logo img{
+        width: 460px;
+    }
+
+    .localisation_child{
+        font-size: 150%;
+    }
+
+    .reservation{
+        height:230px ;
+        font-size: 140%;
+    }
+
+    .reservation_texte{
+        font-size: 120%;
+    }
+
+    .nav{
+        width: 28%;
+        height: 100%;
+        margin: auto;
+    }
+
+    .nav h2{
+        text-align: center;
+    }
+
+    /*********MAIN**********/
+
+    .restau{
+        height: 400px;
+    }
+
+    .restau img{
+        height: 70%;
+    }
+
+    .heart p{
+        font-size: 190%;
+    }
+
+    .heart i {
+        font-size: 170%;
+    }
+    
+    .restau_detail p{
+        font-size: 150%;
+    }
+
+    /******FOOTER*******/
+
+    .logoF{
+        width: 90%;
+        max-width: 1900px;
+    }
+
+    .footer_lien{
+        font-size: 130%;
+    }
+    
+}
