@@ -380,6 +380,35 @@ margin-left: 10px;
     margin-right: 5px;
 }
 
+.reservation_btn{
+   margin: auto;
+   margin-bottom: 20px;
+ }
+ 
+ .reservation_btn-1{
+     height: 40px;
+     border-radius: 25px;
+     border: none;
+     background-image: linear-gradient(to top, #9356c5, #b05ecc, #cb66d1, #e66fd6, #ff79da);
+     cursor: pointer;
+     transition: 0.5s;
+     box-shadow: 1px 2px 3px 0px #979797;
+ }
+ 
+ .reservation_btn-1:hover{
+     transform: scale(1.1);
+     opacity: 0.9;
+     box-shadow: 1px 2px 3px 0px #3e3e3e;
+ 
+ }
+ 
+ .reservation_btn-1::before{
+     content: "Commander";
+     width: 150px;
+     padding: 5px;
+     color: rgb(236, 236, 236);
+ }
+
 /***********FOOTER************/
 
 footer{
@@ -481,6 +510,19 @@ margin-bottom: 15px;
         font-size: 1.8rem;
     }
 
+    .reservation_btn{
+        margin: auto;
+        margin-bottom: 0px;
+        margin-top: 30px;
+        width: 200px;
+    }
+
+    .reservation_btn-1{
+        width: 100%;
+        font-size: 1.4rem;
+        height: 60px;
+    }
+
     /*******FOOTER********/
 
     .logoF img{
@@ -560,6 +602,12 @@ margin-bottom: 15px;
     .pannel{
         width: 100%;
     }
+
+    .reservation_btn{
+        margin: auto;
+        margin-bottom: 20px;
+        margin-top: 20px;
+      }
 
     /*******FOOTER*********/
 
